@@ -39,11 +39,12 @@ def sum_two_numbers(numbers, target):
     print(numbers, target)
     seen_items = {}
     for index, number in enumerate(numbers):
-        diff_target_item = target - numbers[index]
+        # diff_target_item = target - numbers[index]
+        diff_target_item = target - number
         if diff_target_item in seen_items:
             return [seen_items[diff_target_item], index]
         seen_items[number] = index
-        print(seen_items)
+        # print(seen_items)
     return
 
 def main():

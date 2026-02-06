@@ -47,6 +47,7 @@ def main():
     print(find_longest_prefix(["flower", "flow", "flight"]))  # fl
     print(find_longest_prefix(["dog", "racecar", "car"]))     # пустая строка
     print(find_longest_prefix(["interspecies", "interstellar", "interstate"]))  # inters
+    print(find_longest_prefix(["interspecies", "intasderstellar", "interstate"]))  # inters
 
 if __name__ == '__main__':
     main()

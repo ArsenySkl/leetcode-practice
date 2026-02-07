@@ -48,13 +48,13 @@
 
 def valid_parentheses(s: str):
     stack = []
-    mapping = {")": "(", "]": "[", "}": "{"}
+    dict_symbols = {")": "(", "]": "[", "}": "{"}
     
     for char in s:
-        if char in mapping.values():  # Если это открывающая скобка
+        if char in dict_symbols.values():  # Если это открывающая скобка
             stack.append(char)
-        elif char in mapping.keys():  # Если это закрывающая скобка
-            if not stack or mapping[char] != stack.pop():
+        elif char in dict_symbols.keys():  # Если это закрывающая скобка
+            if not stack or dict_symbols[char] != stack.pop():
                 return False
     
     return not stack  # Стек должен быть пустым в конце
